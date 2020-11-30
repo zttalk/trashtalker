@@ -1,0 +1,20 @@
+/sounds/*
+/connect.bat
+*.ppk
+
+# generated Python files
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Vim editor
+*.swp
+
+# OS general files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+[Dd]esktop.ini

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1 style="text-align: center; padding-top: 10%;">Starcraft 2 Trash Talker</h1>
+    <form action="" method="post" novalidate style="text-align: center; font-size: 32px;">
+        {{ form.hidden_tag() }}
+        <p style="padding-top: 10%;">
+            {{ form.username.label }}<br>
+            {{ form.username(size=20) }}
+        </p>
+        <p >{{ form.submit() }}</p>
+        <p style="padding-top: 20%;">Sound Board</p>
+        <p style="padding: 10px;">{{ form.chicken() }} {{ form.ohyeah() }}</p>
+        <p style="paddingp: 10px;">{{ form.gg() }} {{ form.gameover() }} {{ form.fail() }}</p>
+    </form>
+{% endblock %}

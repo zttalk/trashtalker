@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Rajdhani google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- jQuery and Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Add a favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+      html,body,jumbotron,article,aside,details,figcaption,figure,
+      footer,header,hgroup,main,menu,nav,section,summary{
+    font-family: 'Rajdhani', sans-serif;
+      }
+    </style>
+    </head>
+  <body>
+    <div class="container">
+      
+      {% block body %}
+      {% endblock %}
+    </div> <!-- /container -->
+</body>
+</html>

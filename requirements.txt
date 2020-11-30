@@ -1,0 +1,8 @@
+keyboard
+time
+pyperclip
+subprocess
+playsound
+flask
+flask_wtf
+wtforms
