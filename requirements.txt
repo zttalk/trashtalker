@@ -1,8 +1,8 @@
-keyboard
-time
-pyperclip
-subprocess
-playsound
 flask
 flask_wtf
+gevent
+keyboard
+playsound
+pyperclip
+pywin32
 wtforms
