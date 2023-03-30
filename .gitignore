@@ -1,5 +1,6 @@
 /sounds/*
 /connect.bat
+/tunnel.bat
 *.ppk
 
 # generated Python files
