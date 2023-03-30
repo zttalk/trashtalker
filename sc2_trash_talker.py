@@ -8,7 +8,7 @@ import time
 import flask
 import flask_wtf
 import gevent.pywsgi
-import keyboard
+from pynput.keyboard import Key, Controller
 import playsound
 import pyperclip
 #import subprocess
@@ -22,6 +22,8 @@ TITLE = 'Starcraft 2 Trash Talker'
 FG_WINDOW_TITLE = 'StarCraft II'
 
 DEBUG_TEST_SEND = False
+
+keyboard = Controller()
 
 def copy2clip(txt):
 	if os.name == 'nt':
@@ -85,10 +87,13 @@ def send_message(form):
 		else:
 			copy2clip(message)
 			start_time = time.time_ns()
-			keyboard.press_and_release('enter')
-			keyboard.press_and_release('shift+ins')
-			#keyboard.press_and_release('ctrl+v')
-			keyboard.press_and_release('enter')
+			keyboard.press(Key.enter)
+			keyboard.release(Key.enter)
+			with keyboard.pressed(Key.shift):
+				keyboard.press(Key.insert)
+				keyboard.release(Key.insert)
+			keyboard.press(Key.enter)
+			keyboard.release(Key.enter)
 			end_time = time.time_ns()
 			print('Time {} µs'.format(int((end_time - start_time) / 1000)))
 	finally:
